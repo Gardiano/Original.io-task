@@ -9,7 +9,7 @@ export default function Erro() {
        <div className="error-box">
           <strong>  Ops... Pagina Não Encontrada :( </strong> <br /> <br />
           <p> Você quis dizer... </p> <br />
-          <Link to="/home"> Original.io </Link>
+          <Link to="/"> Original.io </Link>
        </div>
     </aside>
   );
