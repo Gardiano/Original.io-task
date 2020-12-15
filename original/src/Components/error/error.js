@@ -8,7 +8,7 @@ export default function Erro() {
     <aside>
        <div className="error-box">
           <strong>  Ops... Pagina Não Encontrada :( </strong> <br /> <br />
-          <p> Você quis dizer ? </p> <br />
+          <p> Você quis dizer... </p> <br />
           <Link to="/home"> Original.io </Link>
        </div>
     </aside>
