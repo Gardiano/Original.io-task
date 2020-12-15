@@ -59,7 +59,7 @@ export default function Product() {
               <div className="product"> </div>
               <strong> Produto adicionado com sucesso! </strong>
               <button> FINALIZAR COMPRA </button>
-              <Link to="/home" alt="home">
+              <Link to="/">
                 <h5> Continuar Comprando </h5>
               </Link>
             </div>
@@ -151,14 +151,14 @@ export default function Product() {
         <div className="menu">
           <div className="menu-box">
             <div className="login">
-              <Link to="/login"> Entrar </Link> | <Link to=""> Cadastre-se </Link>
+              <Link to="/Product"> Entrar </Link> | <Link to="/Product"> Cadastre-se </Link>
             </div>
 
             <div className="sessoes">
-              <Link to=""> SAPATOS </Link>
-              <Link to=""> BOLSAS </Link>
-              <Link to=""> ACESSÓRIOS </Link>
-              <Link to=""> OFF </Link>
+              <Link to="/Product"> SAPATOS </Link>
+              <Link to="/Product"> BOLSAS </Link>
+              <Link to="/Product"> ACESSÓRIOS </Link>
+              <Link to="/Product"> OFF </Link>
             </div>
 
             <div className="options">
@@ -174,7 +174,7 @@ export default function Product() {
         </div>
 
         <div className="back-buttons">
-          <Link to=""> Home </Link> | <Link to=""> Sapatos </Link>
+          <Link to="/"> Home </Link> | <Link to="/Product"> Sapatos </Link>
         </div>
 
         {/* web */}
@@ -186,37 +186,37 @@ export default function Product() {
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
 
             <div className="pic-product">
-              <Link to="">
+              <Link to="/Product">
                 <img src={pic} alt="" />
               </Link>
             </div>
