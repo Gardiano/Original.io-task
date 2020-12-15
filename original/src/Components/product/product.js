@@ -21,6 +21,11 @@ export default function Product() {
   const [email, setEmail] = useState("");
   const [isOpen, setisOpen] = useState(false);
   const [cart, setCart] = useState(false);
+  const[filter, setFilter] = useState('');
+
+  function handleFilter(e) {
+    setFilter(e.target.value);
+  }
 
   function handleNome(e) {
     setNome(e.target.value);
@@ -44,6 +49,20 @@ export default function Product() {
 
   function closeCart() {
     setCart(false);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if( nome.length <= 3 && email.length <= 3 ) {
+      alert('Informe seus dados corretamente');
+      setNome('');
+      setEmail('');
+    } else {
+      alert('Bem-vindo a nossa news!!');
+      setNome('');
+      setEmail('');
+    }
   }
 
   return (
@@ -165,7 +184,7 @@ export default function Product() {
               <button>
                 <img src={search} alt="procurar" />
               </button>
-              <input type="text" placeholder="Buscar" />
+              <input type="text" placeholder="Buscar" value={filter} onChange={handleFilter} />
               <button onClick={openCart}>
                 <img src={bag} alt="carrinho" />
               </button>
@@ -422,7 +441,7 @@ export default function Product() {
           </div>
 
           <div className="newsletter">
-            <form>
+            <form onSubmit={handleSubmit}>
               <strong> ASSINE NOSSA NEWS </strong>
               <label> Nome </label> <br />
               <input
@@ -433,12 +452,13 @@ export default function Product() {
               />{" "}
               <br /> <br />
               <input
-                type="text"
+                type="email"
                 placeholder="  Email"
                 value={email}
+                required
                 onChange={handleEmail}
               />
-              <button> ENVIAR </button>
+              <button type="submit"> ENVIAR </button>
             </form>
           </div>
         </div>
@@ -481,7 +501,7 @@ export default function Product() {
           </div>
 
           <strong> ASSINE NOSSA NEWS </strong>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label> Nome </label> <br />
             <input
               type="text"
@@ -492,12 +512,13 @@ export default function Product() {
             <br /> <br />
             <label> Email </label> <br />
             <input
-              type="text"
+              type="email"
               placeholder=" Email"
               value={email}
+              required
               onChange={handleEmail}
             />
-            <button> Enviar </button>
+            <button type="submit"> Enviar </button>
           </form>
 
           <div className="endereco">
