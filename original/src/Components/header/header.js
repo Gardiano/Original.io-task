@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import "./header.css";
 import "./medias.css";
 
@@ -38,9 +39,9 @@ export default function Header() {
             <div className="product"> </div>
             <strong> Produto adicionado com sucesso! </strong>
             <button> FINALIZAR COMPRA </button>
-            <a href="https://facebook.com" alt="a">
+            <Link to="/Product" >
               <h5> Continuar Comprando </h5>
-            </a>
+            </Link>
           </div>
         </div>
       )}
@@ -110,7 +111,7 @@ export default function Header() {
                 <p> Faltam R$ xx,xx para você </p>
               </div>
               <div>
-                <strong> Faltam R$ xx,xx para você </strong>
+                <strong> ter Frete Gratis </strong>
               </div>
             </div>
 
