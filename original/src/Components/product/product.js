@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-
+import { Link } from 'react-router-dom';
 import "./product.css";
 import "./medias.css";
 
@@ -18,18 +17,17 @@ import ebit from "../../assets/seloebit.png";
 import pic from "../../assets/svg.svg";
 
 export default function Product() {
-
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [isOpen, setisOpen] = useState(false);
   const [cart, setCart] = useState(false);
 
   function handleNome(e) {
-    setNome(e.target.value);  
+    setNome(e.target.value);
   }
 
   function handleEmail(e) {
-    setEmail(e.target.value); 
+    setEmail(e.target.value);
   }
 
   function addToCart() {
@@ -51,115 +49,116 @@ export default function Product() {
   return (
     <>
       <main>
+      <Header />
         {isOpen === true && (
           <div className="lightbox">
             <div className="addToCart">
-              <button className="close-box" onClick={closeItem}> X </button>
+              <button className="close-box" onClick={closeItem}>
+                X
+              </button>
               <div className="product"> </div>
               <strong> Produto adicionado com sucesso! </strong>
               <button> FINALIZAR COMPRA </button>
-              <a href="https://facebook.com" alt="a">
+              <Link to="/home" alt="home">
                 <h5> Continuar Comprando </h5>
-              </a>
+              </Link>
             </div>
           </div>
         )}
 
-      {cart === true && (
-        <div className="lightbox-cart">
-          <div className="cart">
-            <button 
-            className="close-cart-button"
-            onClick={closeCart}
-            > X 
-            </button>
-            <strong> SACOLA </strong>
-            <p> 3 itens </p>
-            <div className="cart-box">             
-              <div className="cart-itens">
-                <div className="cart-img"> </div>
-                <p> Rasteira Tira Dedo </p>
-                <h5> R$ 49,90 </h5>
-                <button> </button>
-                <input type="text" />
-                <button> </button>
-                <button > </button>
+        {cart === true && (
+          <div className="lightbox-cart">
+            <div className="cart">
+              <button className="close-cart-button" onClick={closeCart}>
+                {" "}
+                X
+              </button>
+              <strong> SACOLA </strong>
+              <p> 3 itens </p>
+              <div className="cart-box">
+                <div className="cart-itens">
+                  <div className="cart-img"> </div>
+                  <p> Rasteira Tira Dedo </p>
+                  <h5> R$ 49,90 </h5>
+                  <button> </button>
+                  <input type="text" />
+                  <button> </button>
+                  <button> </button>
+                </div>
+
+                <div className="cart-itens">
+                  <div className="cart-img"> </div>
+                  <p> Rasteira Tira Dedo </p>
+                  <h5> R$ 49,90 </h5>
+                  <button> </button>
+                  <input type="text" />
+                  <button> </button>
+                  <button> </button>
+                </div>
+
+                <div className="cart-itens">
+                  <div className="cart-img"> </div>
+                  <p> Rasteira Tira Dedo </p>
+                  <h5> R$ 49,90 </h5>
+                  <button> </button>
+                  <input type="text" />
+                  <button> </button>
+                  <button> </button>
+                </div>
+
+                <div className="cart-itens">
+                  <div className="cart-img"> </div>
+                  <p> Rasteira Tira Dedo </p>
+                  <h5> R$ 49,90 </h5>
+                  <button> </button>
+                  <input type="text" />
+                  <button> </button>
+                  <button> </button>
+                </div>
+
+                <div className="cart-itens">
+                  <div className="cart-img"> </div>
+                  <p> Rasteira Tira Dedo </p>
+                  <h5> R$ 49,90 </h5>
+                  <button> </button>
+                  <input type="text" />
+                  <button> </button>
+                  <button> </button>
+                </div>
               </div>
 
-              <div className="cart-itens">
-                <div className="cart-img"> </div>
-                <p> Rasteira Tira Dedo </p>
-                <h5> R$ 49,90 </h5>
-                <button> </button>
-                <input type="text" />
-                <button> </button>
-                <button > </button>
-              </div>
-
-              <div className="cart-itens">
-                <div className="cart-img"> </div>
-                <p> Rasteira Tira Dedo </p>
-                <h5> R$ 49,90 </h5>
-                <button> </button>
-                <input type="text" />
-                <button> </button>
-                <button > </button>
-              </div>
-
-              <div className="cart-itens">
-                <div className="cart-img"> </div>
-                <p> Rasteira Tira Dedo </p>
-                <h5> R$ 49,90 </h5>
-                <button> </button>
-                <input type="text" />
-                <button> </button>
-                <button > </button>
-              </div>
-
-              <div className="cart-itens">
-                <div className="cart-img"> </div>
-                <p> Rasteira Tira Dedo </p>
-                <h5> R$ 49,90 </h5>
-                <button> </button>
-                <input type="text" />
-                <button> </button>
-                <button > </button>
-              </div>
-            </div>
-
-            <div className="frete-gratis">
+              <div className="frete-gratis">
               <div>
-                <p> Faltam R$ xx,xx para você </p>
+                  <p> Faltam R$ xx,xx para você </p>
+                </div>
+                <div>
+                  <strong> Ganhar frete gratis </strong>
+                </div>
               </div>
-              <div>
-                <strong> Ganhar frete gratis </strong>
-              </div>             
-            </div>   
 
-            <div className="cart-price">
+              <div className="cart-price">
                 <div className="cart-price-value">
                   <p> Total: R$ 149,00 </p>
                   <h5> até 3x de R$ 49,90 sem juros </h5>
                 </div>
                 <button> FINALIZAR COMPRA </button>
+              </div>
             </div>
-          
           </div>
-        </div>
-      )}
+        )}
 
-    
+       
         <div className="menu">
           <div className="menu-box">
             <div className="login">
-              <a href="https"> Entrar </a> | <a href="https"> Cadastre-se </a>
+              <Link to="/login"> Entrar </Link> | <Link to=""> Cadastre-se </Link>
             </div>
 
             <div className="sessoes">
-              <a href="https"> SAPATOS </a>
-              <a href="https"> BOLSAS </a>
-              <a href="https"> ACESSÓRIOS </a>
-              <a href="https"> OFF </a>
+              <Link to=""> SAPATOS </Link>
+              <Link to=""> BOLSAS </Link>
+              <Link to=""> ACESSÓRIOS </Link>
+              <Link to=""> OFF </Link>
             </div>
 
             <div className="options">
@@ -175,7 +174,7 @@ export default function Product() {
         </div>
 
         <div className="back-buttons">
-          <a href="https"> Home </a> |<a href="https"> Sapatos </a>
+          <Link to=""> Home </Link> | <Link to=""> Sapatos </Link>
         </div>
 
         {/* web */}
@@ -187,39 +186,39 @@ export default function Product() {
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="pic-product">
-              <a href="https">
+              <Link to="">
                 <img src={pic} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -348,25 +347,25 @@ export default function Product() {
 
         <div className="footer-contents">
           <div className="medias">
-            <a href="https://facebook.com/">
+            <a href="https://facebook.com/" rel="noreferrer" target="_blank">
               {" "}
               <img src={faceBook} alt="facebook" />{" "}
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" rel="noreferrer" target="_blank">
               {" "}
               <img src={instagram} alt="instagram" />{" "}
             </a>
-            <a href="https://pinterest.com">
+            <a href="https://pinterest.com" rel="noreferrer" target="_blank">
               {" "}
               <img src={pinterest} alt="pinterest" />{" "}
             </a>
 
             <div className="selos">
-              <a href="https://facebook.com/">
+              <a href="https://vtex.com/br-pt/" rel="noreferrer" target="_blank">
                 {" "}
                 <img src={vtex} alt="vTex" />{" "}
               </a>
-              <a href="https://instagram.com">
+              <a href="https://www.ebit.com.br/" rel="noreferrer" target="_blank">
                 {" "}
                 <img src={ebit} alt="eBit" />{" "}
               </a>
@@ -376,15 +375,15 @@ export default function Product() {
           <div className="infos">
             <div className="institucional">
               <p> INSTITUCIONAL </p>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 A Marca{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank" >
                 {" "}
                 Lojas{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Contato{" "}
               </a>
@@ -392,14 +391,14 @@ export default function Product() {
 
             <div className="institucional">
               <p> INFORMAÇÕES </p>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 Formas de Pagamento{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Trocas e devoluções{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Cuidados Com o Produto{" "}
               </a>
@@ -407,15 +406,15 @@ export default function Product() {
 
             <div className="institucional">
               <p> CONHEÇA </p>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Franquias e Multimarcas{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Trabalhe com a Gente{" "}
               </a>
-              <a href="https://facebook.com" alt="a">
+              <a href="/" rel="noreferrer" target="_blank">
                 {" "}
                 Procon-RJ{" "}
               </a>
@@ -456,28 +455,28 @@ export default function Product() {
           </button>
 
           <div className="medias">
-            <a href="https://facebook.com/">
+            <a href="https://facebook.com/" rel="noreferrer" target="_blank">
               {" "}
               <img src={faceBook} alt="facebook" />{" "}
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" rel="noreferrer" target="_blank">
               {" "}
               <img src={instagram} alt="instagram" />{" "}
             </a>
-            <a href="https://pinterest.com">
+            <a href="https://pinterest.com/" rel="noreferrer" target="_blank">
               {" "}
               <img src={pinterest} alt="pinterest" />{" "}
             </a>
           </div>
 
           <div className="selos">
-            <a href="https://facebook.com/">
+            <a href="https://vtex.com/br-pt/" rel="noreferrer" target="_blank">
               {" "}
               <img src={vtex} alt="vTex" />{" "}
             </a>
-            <a href="https://instagram.com">
+            <a href="https://www.ebit.com.br/" rel="noreferrer" target="_blank">
               {" "}
-              <img src={ebit} alt="eBit" />{" "}
+              <img src={ebit} alt="eBit"  />{" "}
             </a>
           </div>
 

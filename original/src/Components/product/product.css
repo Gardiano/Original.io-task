@@ -1,4 +1,9 @@
 
+Header {
+padding-top: 0;
+height: 50px;
+}
+
 button {
 cursor: pointer;
 }
@@ -291,12 +296,12 @@ width: 50%;
 .frete-gratis p {
 border: 0;
 font-size: 14px;
-color: rgb(219, 219, 219);
+color: whitesmoke;
 margin-top: 11px;
 margin-left: 20px;
 }
 .frete-gratis strong {
-font-size: 14px;
+font-size: 16px;
 color: white;
 margin-top: -5px;
 margin-left: -30px;
@@ -353,7 +358,6 @@ main .menu {
 width: 100%;    
 margin: auto;
 display: block;
-height: 50px;
 border-bottom: 1px solid rgb(204,204,204,1);
 }
 
@@ -498,6 +502,20 @@ height: 150px;
 background-position: center;
 }
 
+/* scroll bar track css */
+.thumbs::-webkit-scrollbar {
+width: 5px;
+}
+.thumbs::-webkit-scrollbar-track {
+background: #E2E2E2;
+}
+.thumbs::-webkit-scrollbar-thumb {
+background: #DE8F75;
+}
+.thumbs::-webkit-scrollbar-thumb:hover {
+background: #DE8F75;
+}
+
 main .arrow-up {
 position: absolute;
 height: 20px;
@@ -551,10 +569,8 @@ font-weight: bold;
 font-size: 26px;
 line-height: 100%;
 display: flex;
-
 text-transform: uppercase;
 color: #202020;
-
 }
 
 main .spec-product .id-product {

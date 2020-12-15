@@ -33,8 +33,7 @@ export default function Header() {
         <div className="lightbox">
           <div className="addToCart">
             <button className="close-box" onClick={closeItem}>
-              {" "}
-              X{" "}
+              X
             </button>
             <div className="product"> </div>
             <strong> Produto adicionado com sucesso! </strong>
@@ -50,7 +49,6 @@ export default function Header() {
         <div className="lightbox-cart">
           <div className="cart">
             <button className="close-cart-button" onClick={closeCart}>
-              {" "}
               X
             </button>
             <strong> SACOLA </strong>
@@ -128,12 +126,12 @@ export default function Header() {
       )}
 
       <div>
-        <button className="menu">
+        <button id="header-menu" className="menu">
           <img src={menu} alt="menu" />
         </button>
       </div>
 
-      <div>
+      <div id="header-logo">
         <img className="logo" src={logo} alt="logo" />
       </div>
 

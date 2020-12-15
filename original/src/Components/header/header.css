@@ -23,5 +23,16 @@ display: none;
 }
 
 header .bag {
-    display: none;
+display: none;
+}
+
+header #header-logo {
+margin-top: -8px;
+}
+
+header #header-menu {
+margin-top: 10px;
+display: block;
+border: 0;
+outline: 0;
 }
