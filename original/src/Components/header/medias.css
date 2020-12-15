@@ -18,6 +18,7 @@ font-size: 20px;
 
 header #header-logo {
 margin-top: 5px;
+margin-left: 40px;
 }
 
 header .menu {
@@ -41,6 +42,7 @@ border: 0;
 outline: 0;
 cursor: pointer;
 background: #ffffff;
+margin-left: 10px;
 }
 
 header .search img {
@@ -55,6 +57,7 @@ outline: 0;
 background: #ffffff;
 cursor: pointer;
 margin-top: 3px;
+margin-left: 10px;
 }
 
 header .bag img {
