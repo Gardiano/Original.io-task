@@ -503,6 +503,13 @@ width: 30px;
 background-color: transparent;
 }
 
+main .thumb-video button {
+width: 30px;
+outline: 0;
+border: 0;
+background: transparent;
+}
+
 main .thumbs .pic-product img {
 width: 100px;
 height: 150px;

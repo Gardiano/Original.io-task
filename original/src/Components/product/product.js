@@ -89,7 +89,6 @@ export default function Product() {
           <div className="lightbox-cart">
             <div className="cart">
               <button className="close-cart-button" onClick={closeCart}>
-                {" "}
                 X
               </button>
               <strong> SACOLA </strong>
@@ -201,7 +200,7 @@ export default function Product() {
           <div className="thumbs">
             <p> Video </p>
             <div className="thumb-video">
-              <img src={videoMobile} alt="video" />
+             <button>  <img src={videoMobile} alt="video" /> </button>
             </div>
 
             <div className="pic-product">
