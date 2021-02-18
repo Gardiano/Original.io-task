@@ -1,2 +1,2 @@
 # Original.io-task - challenge!
-deploy: https://original-io-task-git-master.gardiano.vercel.app/
+:rocket: https://original-io-task-git-master.gardiano.vercel.app/
